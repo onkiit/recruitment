@@ -146,7 +146,7 @@ func createCSV(district_name string, museums []Museum){
 	log.Println(district_name + ".csv => File Created")
 }
 
-func asyncCreateFile(district Region){
+func createFile(district Region){
 	museum := getMuseumByCity(district.Kode)
 	if len(museum) > 0 {
 		createCSV(district.Nama, museum)
@@ -156,7 +156,7 @@ func asyncCreateFile(district Region){
 func main(){
 	districts := getDistrict()
 	for _, district := range districts {
-		asyncCreateFile(district)
+		createFile(district)
 	}
 	
 }

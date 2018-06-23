@@ -26,7 +26,7 @@ func initialRun(){
 	}	
 }
 
-func createArr() (arr []int){
+func createArr() (arr []int){ //array builder
 	var size, input int
 	fmt.Print("Array size: ")
 	fmt.Scan(&size)
@@ -38,7 +38,7 @@ func createArr() (arr []int){
 	return
 }
 
-func findMax(arr []int) (max int) {
+func findMax(arr []int) (max int) { //find maximum value of an array. used for vertical bar height
 	max = arr[0]
 	for i := 0; i < len(arr); i++ {
 		if arr[i] > max {
@@ -66,19 +66,22 @@ func showBar(arr []int) {
 	}
 }
 
-//TODO: fixing sorting
+
 func insertionSort(arr []int) {
-	for i := 0;i < len(arr);i++ {
-		temp := arr[i]
-		a := i-1
-		for a >= 0 && arr[a] > temp {
-			arr[a+1] = arr[a]
-			a = a-1
+	showBar(arr)
+	fmt.Println()
+	for i := len(arr) - 1; i > 0; i-- { //comparing from tail to head
+		var temp int
+		j := i-1
+		for j >= 0 && arr[i] < arr[j] {
+			temp = arr[j]
+			arr[j] = arr[i]
+			arr[i] = temp
+			showBar(arr)
+			fmt.Println()
+			j = j - 1 //loop till j >= 0
+			
 		}
-		arr[a+1] = temp
-		fmt.Println()
-		showBar(arr)
-		fmt.Println()
 	}
 }
 
