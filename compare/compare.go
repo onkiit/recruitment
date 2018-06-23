@@ -32,20 +32,6 @@ func scanDir() (source []string, target []string) {
 	return
 }
 
-func compare(source []string, target []string) {
-	for i := 0; i<len(source);i++ {
-		for j:=i; j<len(target);i++ {
-			if source[i] != target[j]{
-				if s.Contains(source[i], target[j]){
-					
-				}
-			}
-		}
-	}
-}
-
 func main() {
 	source, target := scanDir()
-	compare(source, target)
-	fmt.Println("comparing this shit")
 }
