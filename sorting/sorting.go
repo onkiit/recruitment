@@ -85,5 +85,5 @@ func insertionSort(arr []int) {
 }
 
 func main(){
-	initialRun()
+	initialRun() 
 }

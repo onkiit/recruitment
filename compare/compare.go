@@ -96,5 +96,5 @@ func main() {
 		for _, tgt := range targets {
 			compareContent(src, tgt)
 		}	
-	}
+	} 
 }

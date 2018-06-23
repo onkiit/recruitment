@@ -21,7 +21,7 @@ func New(size int) Queue {
 	i := Item{}
 	i.Size = size
 	return nil
-}
+} 
 
 func Push(key interface{}) {
 	fmt.Println(key)
