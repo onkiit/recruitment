@@ -69,7 +69,7 @@ func showBar(arr []int) {
 func insertionSort(arr []int) {
 	showBar(arr)
 	fmt.Println()
-	for i := 0; i < len(arr); i++ { //comparing from tail to head
+	for i := 0; i < len(arr); i++ {
 		var temp int
 		j := i
 		for j > 0 && arr[j] < arr[j-1] {
