@@ -66,21 +66,20 @@ func showBar(arr []int) {
 	}
 }
 
-
 func insertionSort(arr []int) {
 	showBar(arr)
 	fmt.Println()
-	for i := len(arr) - 1; i > 0; i-- { //comparing from tail to head
+	for i := 0; i < len(arr); i++ { //comparing from tail to head
 		var temp int
-		j := i-1
-		for j >= 0 && arr[i] < arr[j] {
-			temp = arr[j]
-			arr[j] = arr[i]
-			arr[i] = temp
+		j := i
+		for j > 0 && arr[j] < arr[j-1] {
+			temp = arr[j-1]
+			arr[j-1] = arr[j]
+			arr[j] = temp
 			showBar(arr)
 			fmt.Println()
 			j = j - 1 //loop till j >= 0
-			
+
 		}
 	}
 }
